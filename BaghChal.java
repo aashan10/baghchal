@@ -54,6 +54,11 @@ public class BaghChal {
                 }
                 row--;
                 col--;
+                if(board[row][col] != TIGER){
+                    System.out.println("The selected coordinate doesn't have a tiger!");
+                    move();
+                    return;
+                }
                 boolean[] available_moves = availableMove(row, col);
                 if(available_moves[0]){
                     System.out.println("1. Move Upwards");
